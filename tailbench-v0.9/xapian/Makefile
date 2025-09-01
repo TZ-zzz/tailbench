@@ -9,7 +9,7 @@ TBENCH_CLIENT_OBJ = $(TBENCH_PATH)/client.o $(TBENCH_PATH)/tbench_client_network
 TBENCH_INTEGRATED_OBJ = $(TBENCH_PATH)/client.o $(TBENCH_PATH)/tbench_server_integrated.o
 
 CXX = g++
-XAPIAN_INSTALL_PATH = ./xapian-core-1.2.13/install/bin
+XAPIAN_INSTALL_PATH = /usr/bin
 CXXFLAGS = -Wall -W -O3 -g -std=c++0x `$(XAPIAN_INSTALL_PATH)/xapian-config --cxxflags` -I$(TBENCH_PATH)
 LIBS = `$(XAPIAN_INSTALL_PATH)/xapian-config --libs` -lpthread -lrt
 
