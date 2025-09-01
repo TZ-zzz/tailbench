@@ -1,0 +1,12 @@
+services:
+  tailbench:
+    build: .
+    image: tangzhen1027/tailbench:latest
+    volumes:
+      - ./tailbench-v0.9:/tailbench/tailbench
+      - ./tailbench.inputs:/tailbench/tailbench.inputs
+    environment:
+      - LD_LIBRARY_PATH=/src/tailbench/sphinx/sphinx-install/lib:/src/tailbench/xapian/xapian-core-1.2.13/install/lib
+    tty: true
+    command: /bin/bash
+    restart: always
